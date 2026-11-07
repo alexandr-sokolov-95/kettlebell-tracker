@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import test from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { initialTracker, startWorkout } from '../src/tracker';
+import { initialTracker, performedWorkout, startWorkout, toggleSet } from '../src/tracker';
 
 test('Postgres draft persistence, atomic retry, and cross-user RLS', async () => {
   const db = await PGlite.create();
@@ -26,6 +26,9 @@ test('Postgres draft persistence, atomic retry, and cross-user RLS', async () =>
     }
     const state = initialTracker();
     const workout = startWorkout(state);
+    workout.trainingDate = '2026-10-31';
+    workout.notes = 'Разминка и махи';
+    workout.main[0].sets = toggleSet(workout.main[0].sets, 1);
     await db.query('insert into public.bell_onboarding values ($1, $2)', ['owner@example.test', state]);
     await db.exec(`set role authenticated;
       set request.jwt.claim.sub = '${owner}';
@@ -38,12 +41,15 @@ test('Postgres draft persistence, atomic retry, and cross-user RLS', async () =>
     assert.deepEqual(restored.rows[0].draft, workout);
     delete state.drafts[state.levels[0].id];
     state.levels[0].completed++;
+    const actual = performedWorkout(workout);
     const save = 'select public.bell_save_workout($1,$2,$3,$4,$5)';
-    await assert.rejects(db.query(save, [0, state, workout.id, 1, workout]), /Tracker changed elsewhere/);
+    await assert.rejects(db.query(save, [0, state, workout.id, 1, actual]), /Tracker changed elsewhere/);
     assert.equal((await db.query('select * from public.bell_sessions')).rows.length, 0);
-    await db.query(save, [1, state, workout.id, 1, workout]);
-    await db.query(save, [1, state, workout.id, 1, workout]);
-    assert.equal((await db.query('select * from public.bell_sessions')).rows.length, 1);
+    await db.query(save, [1, state, workout.id, 1, actual]);
+    await db.query(save, [1, state, workout.id, 1, actual]);
+    const history = await db.query<{ workout: typeof workout }>('select workout from public.bell_sessions');
+    assert.equal(history.rows.length, 1);
+    assert.deepEqual(history.rows[0].workout, actual);
     const version = await db.query<{ version: number }>('select version from public.bell_trackers');
     assert.equal(version.rows[0].version, 2);
     const last = await db.query<{ results: Record<string, unknown> }>("select public.bell_previous_results(array['KB-02']) as results");

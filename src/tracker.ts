@@ -1,3 +1,4 @@
+import { localDate, number } from './locale';
 import catalog from './catalog.json';
 
 export const exercises = [...catalog, {
@@ -9,10 +10,10 @@ export const skills = catalog;
 export const statuses = ['Not learned', 'Learning', 'Learned'] as const;
 export type Status = typeof statuses[number];
 export type Mode = 'total' | 'arms' | 'directions';
-export type Reps = { first: number; second: number };
+export type Reps = { first: number; second: number; completed?: boolean };
 export type Entry = { id: string; kg: number; mode: Mode; sets: Reps[] };
 export type Level = { id: string; goal: number; completed: number; main: Entry[]; practiced: string[] };
-export type Draft = { id: string; warmup: Entry[]; main: Entry[]; finisher: Entry[] };
+export type Draft = { id: string; warmup: Entry[]; main: Entry[]; finisher: Entry[]; trainingDate?: string; notes?: string };
 export type Tracker = {
   levels: Level[];
   active: number;
@@ -32,7 +33,7 @@ export type Session = {
 };
 export const groups = ['warmup', 'main', 'finisher'] as const;
 export type Group = typeof groups[number];
-export const groupNames = { warmup: 'Warmup', main: 'Main work', finisher: 'Finisher' };
+export const groupNames = { warmup: 'Разминка', main: 'Основные упражнения', finisher: 'Дополнительные упражнения' };
 const warmupIds = new Set(['KB-01', 'KB-03', 'KB-04', 'KB-05', 'KB-06', 'KB-07']);
 const defaultArms = new Set([8,9,10,11,12,13,14,16,17,18,19,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,42,44,47,48,52,54,56,59,61,66,69,70,77,79,81]);
 
@@ -86,6 +87,7 @@ export function advance(state: Tracker, newlyLearned: string[] = []) {
 export function startWorkout(state: Tracker): Draft {
   return {
     id: crypto.randomUUID(),
+    trainingDate: localDate(),
     ...structuredClone({
       warmup: state.warmup, main: state.levels[state.active].main, finisher: state.finisher,
     }),
@@ -127,11 +129,30 @@ export function move<T>(items: T[], from: number, to: number): T[] {
   return result;
 }
 
-export function summarize(item: Entry) {
-  const sets = item.sets.map(set => item.mode === 'total' ? String(set.first) : `${set.first}/${set.second}`);
+export function toggleSet(sets: Reps[], index: number) {
+  return sets.map((set, i) => i === index ? { ...set, completed: !set.completed } : set);
+}
+
+export function completedSets(item: Entry, legacyHistory = false) {
+  return item.sets.filter(set => set.completed ?? legacyHistory);
+}
+
+export function performedWorkout(draft: Draft): Draft {
+  const workout = { ...draft };
+  for (const group of groups) {
+    workout[group] = draft[group].filter(item => completedSets(item).length).map(item => ({
+      ...item, sets: item.sets.map(set => ({ ...set, completed: set.completed === true })),
+    }));
+  }
+  return workout;
+}
+
+export function summarize(item: Entry, actual = false) {
+  const sets = (actual ? completedSets(item, true) : item.sets).map(set => item.mode === 'total' ? String(set.first) : `${set.first}/${set.second}`);
+  if (!sets.length) return 'Нет выполненных подходов';
   const reps = sets.every(value => value === sets[0])
     ? `${sets.length} × ${sets[0]}`
-    : `${sets.length} sets · ${sets.join(', ')}`;
-  const sides = item.mode === 'arms' ? ' L/R' : item.mode === 'directions' ? ' CW/CCW' : '';
-  return `${reps}${sides} · ${item.kg} kg`;
+    : `${sets.length} подх. · ${sets.join(', ')}`;
+  const sides = item.mode === 'arms' ? ' (лев./прав.)' : item.mode === 'directions' ? ' (по/против часовой)' : '';
+  return `${reps}${sides} · ${number.format(item.kg)} кг`;
 }
