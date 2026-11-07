@@ -112,6 +112,7 @@ function Workout({ state, busy, update, complete, historyVersion, setNotice }: {
     return saved ? { ...saved, trainingDate: saved.trainingDate ?? localDate() } : startWorkout(state);
   });
   const [template, setTemplate] = useState<Draft>();
+  const [saving, setSaving] = useState(false);
   const [dirty, setDirty] = useState(false);
   const [failed, setFailed] = useState(false);
   const [previous, setPrevious] = useState<Record<string, EntryResult>>({});
@@ -192,12 +193,6 @@ function Workout({ state, busy, update, complete, historyVersion, setNotice }: {
       {failed && !template && <button disabled={busy || !validWorkout(draft)} onClick={persistDraft}>Повторить сохранение черновика</button>}
     </div>
     {previousError && <p className="error" role="alert">Не удалось загрузить предыдущие результаты. {previousError}</p>}
-    {!template && <div className="panel workout-fields">
-      <label>Дата тренировки<input type="date" value={draft.trainingDate ?? ''} required
-        onChange={event => changeDraft({ ...draft, trainingDate: event.target.value })} /></label>
-      <label>Заметки к тренировке<textarea rows={2} maxLength={5000} value={draft.notes ?? ''}
-        onChange={event => changeDraft({ ...draft, notes: event.target.value })} /></label>
-    </div>}
     {groups.map(group => <ExerciseGroup key={`${template ? 'template' : 'draft'}:${group}`} template={!!template} group={group} entries={editing[group]}
       kg={state.equipment.kg} bells={state.equipment.count} previous={previous} baseline={state.baseline}
       change={entries => {
@@ -205,9 +200,16 @@ function Workout({ state, busy, update, complete, historyVersion, setNotice }: {
         if (template) setTemplate(next);
         else changeDraft(next);
       }} />)}
-    <div className="save-bar">
+    <div className="panel workout-save">
+      {!template && <div className="workout-fields">
+        <label>Дата тренировки<input type="date" value={draft.trainingDate ?? ''} required
+          onChange={event => changeDraft({ ...draft, trainingDate: event.target.value })} /></label>
+        <label>Заметки к тренировке<textarea rows={2} maxLength={5000} value={draft.notes ?? ''}
+          onChange={event => changeDraft({ ...draft, notes: event.target.value })} /></label>
+      </div>}
       <span className="muted">{!validWorkout(editing) ? 'Проверьте вес и повторения.' : template ? 'Применится к новым тренировкам' : !validTrainingDate ? 'Укажите дату тренировки.' : !hasCompletedSets ? 'Отметьте выполненный подход.' : 'Сохранятся выполненные подходы'}</span>
-      {template ? <button className="primary" disabled={busy || !validWorkout(template)} onClick={async () => {
+      {template ? <button className="primary" disabled={busy || saving || !validWorkout(template)} aria-busy={saving} onClick={async () => {
+        setSaving(true);
         const saved = await update(next => {
           next.warmup = template.warmup;
           next.finisher = template.finisher;
@@ -222,8 +224,13 @@ function Workout({ state, busy, update, complete, historyVersion, setNotice }: {
           }
           setNotice('Шаблон уровня сохранён.');
         }
-      }}>Сохранить шаблон</button> : <button className="primary" disabled={busy || !validWorkout(draft) || !validTrainingDate || !hasCompletedSets}
-        onClick={() => complete(draft)}>Сохранить тренировку</button>}
+        setSaving(false);
+      }}>{saving ? 'Сохраняем шаблон…' : 'Сохранить шаблон уровня'}</button> : <button className="primary" disabled={busy || saving || !validWorkout(draft) || !validTrainingDate || !hasCompletedSets}
+        aria-busy={saving} onClick={async () => {
+          setSaving(true);
+          await complete(draft);
+          setSaving(false);
+        }}>{saving ? 'Сохраняем тренировку…' : 'Сохранить тренировку'}</button>}
     </div>
   </>;
 }

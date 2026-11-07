@@ -58,7 +58,12 @@ function ExerciseCard({ item, template, previous, baseline, update, up, down, re
         <h3><ExerciseName id={item.id} /></h3></div>
       <button type="button" className="edit-button" aria-expanded={editing} aria-controls={settingsId}
         aria-label={`${editing ? 'Закрыть редактирование' : 'Редактировать'}: ${russianNames[item.id]}`}
-        onClick={() => setEditing(open => !open)}>{editing ? 'Готово' : 'Редактировать'}</button>
+        onClick={() => setEditing(open => !open)}>
+        <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          {editing ? <path d="m5 12 4 4L19 6" /> : <path d="m16 4 4 4M4 20l4.5-1 12-12a1.4 1.4 0 0 0 0-2l-1.5-1.5a1.4 1.4 0 0 0-2 0l-12 12L4 20Z" />}
+        </svg>
+      </button>
     </div>
     <div className="card-meta">
       <span>{summarize(item)}</span>
@@ -67,10 +72,10 @@ function ExerciseCard({ item, template, previous, baseline, update, up, down, re
     {!template && <div className="set-tracking">
       <span className="set-progress">{done} из {item.sets.length} подходов</span>
       <div className="set-toggles" role="group" aria-label={`Выполненные подходы: ${russianNames[item.id]}`}>
-        {item.sets.map((set, i) => <button type="button" key={i} aria-pressed={set.completed === true}
+        {item.sets.map((set, i) => <button type="button" key={i} role="checkbox" aria-checked={set.completed === true}
           aria-label={`Подход ${i + 1}`}
           onClick={() => update({ sets: toggleSet(item.sets, i) })}>
-          {set.completed && <span aria-hidden="true">✓ </span>}{i + 1}
+          <span aria-hidden="true">{set.completed ? '✓ ' : ''}{i + 1}</span>
         </button>)}
       </div>
     </div>}
