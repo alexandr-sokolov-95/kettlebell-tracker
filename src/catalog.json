@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "KB-01",
+    "name": "Two Hand Deadlift",
+    "url": "https://www.youtube.com/watch?v=x0XkmM34BPI&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=1",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-02",
+    "name": "Two Hand Swing",
+    "url": "https://www.youtube.com/watch?v=m-S9H2XVvYg&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=2",
+    "requires": [
+      "KB-01"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-03",
+    "name": "Around the World",
+    "url": "https://www.youtube.com/watch?v=XaegZzSbtr0&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=3",
+    "requires": [
+      "KB-01"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-04",
+    "name": "Halo",
+    "url": "https://www.youtube.com/watch?v=25xdtjbFPtw&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=4",
+    "requires": [
+      "KB-01"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-05",
+    "name": "Around the World Front to Back",
+    "url": "https://www.youtube.com/watch?v=TwlQQXAQpaQ&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=5",
+    "requires": [
+      "KB-03"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-06",
+    "name": "Around the World Back to Front",
+    "url": "https://www.youtube.com/watch?v=GrRO00YOIWM&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=6",
+    "requires": [
+      "KB-05"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-07",
+    "name": "Alternating Halo",
+    "url": "https://www.youtube.com/watch?v=SMpquy5zSL4&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=7",
+    "requires": [
+      "KB-04"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-08",
+    "name": "Two Hand Pickup One Hand Putdown",
+    "url": "https://www.youtube.com/watch?v=eMkDP9VmMc0&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=8",
+    "requires": [
+      "KB-01"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-09",
+    "name": "Single Arm Swing",
+    "url": "https://www.youtube.com/watch?v=ejPpyLKZ1L4&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=9",
+    "requires": [
+      "KB-02"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-10",
+    "name": "Hand to Hand Transition",
+    "url": "https://www.youtube.com/watch?v=0Uk0Rdm3QFs&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=10",
+    "requires": [
+      "KB-09"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-11",
+    "name": "Two Hand Pickup Clean Putdown",
+    "url": "https://www.youtube.com/watch?v=cQC2y-ByaAw&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=11",
+    "requires": [
+      "KB-08",
+      "KB-09"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-12",
+    "name": "Swing Clean",
+    "url": "https://www.youtube.com/watch?v=_nIsSXWs5iU&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=12",
+    "requires": [
+      "KB-11"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-13",
+    "name": "Clean with Hand Transition",
+    "url": "https://www.youtube.com/watch?v=6TVqHl2gtuM&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=13",
+    "requires": [
+      "KB-12",
+      "KB-10"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-14",
+    "name": "Single Arm Overhead Press",
+    "url": "https://www.youtube.com/watch?v=XHkI03S6Pls&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=14",
+    "requires": [
+      "KB-08"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-15",
+    "name": "Newspaper drill",
+    "url": "https://www.youtube.com/watch?v=htByOXjHLXE&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=15",
+    "requires": [
+      "KB-12"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-16",
+    "name": "Start Stop Clean",
+    "url": "https://www.youtube.com/watch?v=XbK3jxI0WNQ&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=16",
+    "requires": [
+      "KB-12"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-17",
+    "name": "Clean & Press",
+    "url": "https://www.youtube.com/watch?v=SSxB3m5qRas&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=17",
+    "requires": [
+      "KB-12",
+      "KB-14"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-18",
+    "name": "Clean & Press with Hand Transition",
+    "url": "https://www.youtube.com/watch?v=5Q4vMOYvAGg&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=18",
+    "requires": [
+      "KB-17",
+      "KB-13"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-19",
+    "name": "Start Stop Clean & Press",
+    "url": "https://www.youtube.com/watch?v=dSj3kqbuois&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=19",
+    "requires": [
+      "KB-17"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-20",
+    "name": "Bottoms-Up Goblet Box Squat",
+    "url": "https://www.youtube.com/watch?v=k5Bc7pkEmrU&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=20",
+    "requires": [
+      "KB-04"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-21",
+    "name": "Goblet Box Squat with Halo",
+    "url": "https://www.youtube.com/watch?v=Aik5-BStbnc&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=21",
+    "requires": [
+      "KB-20"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-22",
+    "name": "Goblet Squat with Halo",
+    "url": "https://www.youtube.com/watch?v=cnZ8Mx8NQPE&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=22",
+    "requires": [
+      "KB-21"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-23",
+    "name": "Single-Bell Front Squat",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-08",
+      "KB-22"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-24",
+    "name": "Rack Opposite Leg Step-Back Lunge",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-23"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-25",
+    "name": "Clean Step-Back Clean",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-16",
+      "KB-24"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-26",
+    "name": "Half-Kneeling Clean",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-25"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-27",
+    "name": "Clean Step-Back Lunge Clean",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-26"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-28",
+    "name": "Single-Bell Floor Press",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-29",
+    "name": "Half-Kneeling Clean & Press",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-19",
+      "KB-26"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-30",
+    "name": "Floor Press with Roll",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-28"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-31",
+    "name": "Half-Kneeling Windmill",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-29"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-32",
+    "name": "Quarter Turkish Get-Up",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-30"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-33",
+    "name": "Half-Kneeling Clean & Press Windmill",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-31"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-34",
+    "name": "Half Get-Up",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-32"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-35",
+    "name": "Clean & Press to Overhead Step-Back Lunge",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-33",
+      "KB-27"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-36",
+    "name": "Half-Kneeling Hip Drop",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-33"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-37",
+    "name": "Half Get-Up to Hip Pass",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-34"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-38",
+    "name": "Half-Kneeling Clean & Press to Hip Drop",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-36"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-39",
+    "name": "Box Squat to Boat Pose",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-45",
+      "KB-53"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-40",
+    "name": "Spinal Rock (Bodyweight)",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-41",
+    "name": "Flat Back Pullover",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-42",
+    "name": "Half Get-Up to Hip Pass (to Half-Kneeling)",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-37"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-43",
+    "name": "Spinal Rock",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-40"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-44",
+    "name": "Push Press",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-19"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-45",
+    "name": "Rock-Bottom Curl with Goblet Squat",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-22"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-47",
+    "name": "Rock-Bottom Front Squat Pickup",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-23"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-48",
+    "name": "Thruster",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-23",
+      "KB-44"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-49",
+    "name": "Seated Two-Handed Overhead Press",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-50",
+    "name": "Two-Handed Dead Clean to Double Front Rack",
+    "url": "https://www.youtube.com/watch?v=acqKxfMGAbk&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=55",
+    "requires": [
+      "KB-12"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-51",
+    "name": "Four-Count Squat (Bodyweight)",
+    "url": "https://www.youtube.com/watch?v=1rkGfL1EdWI",
+    "requires": [
+
+    ],
+    "external": [
+      "Bodyweight squat"
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-52",
+    "name": "Rack Alt Shinbox",
+    "url": "https://www.youtube.com/watch?v=AoEYX36Q2Zg",
+    "requires": [
+
+    ],
+    "external": [
+      "Alternating shin box"
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-53",
+    "name": "Handle Up Goblet Squat",
+    "url": "https://www.youtube.com/watch?v=i2AtDi4yZSA",
+    "requires": [
+      "KB-22"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-54",
+    "name": "Contra Shinbox Press",
+    "url": "https://www.youtube.com/watch?v=FEbi2lKVEHU",
+    "requires": [
+      "KB-52"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-55",
+    "name": "Flat Back Pullover Situp Press",
+    "url": "https://www.youtube.com/playlist?list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA",
+    "requires": [
+      "KB-41",
+      "KB-49"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-56",
+    "name": "Suitcase Deadlift",
+    "url": "https://www.youtube.com/watch?v=d6i6MwVOmk0&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=58",
+    "requires": [
+      "KB-01"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-57",
+    "name": "Double Suitcase",
+    "url": "https://www.youtube.com/watch?v=4PSOSrDcGfc&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=59",
+    "requires": [
+      "KB-56"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-58",
+    "name": "Double Sumo Deadlift",
+    "url": "https://www.youtube.com/watch?v=gdutIla6nMw",
+    "requires": [
+      "KB-57"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-59",
+    "name": "Half Snatch Down",
+    "url": "https://www.youtube.com/watch?v=u2NbMtX_Rb0&list=PLk4oYPJ7TXKhX8YqA2AVrfgs_pEF6p7KA&index=60",
+    "requires": [
+      "KB-16"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-60",
+    "name": "Double Swing",
+    "url": "https://www.youtube.com/watch?v=P5IFTJySA_s",
+    "requires": [
+      "KB-10",
+      "KB-58"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-61",
+    "name": "Half Snatch Up",
+    "url": "https://www.youtube.com/watch?v=3HEmUyLYjjc",
+    "requires": [
+      "KB-59"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-62",
+    "name": "Double Clean",
+    "url": "https://www.youtube.com/watch?v=Qe9ejhAtdGY",
+    "requires": [
+      "KB-16",
+      "KB-60"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-63",
+    "name": "Double Rockit",
+    "url": "https://www.youtube.com/watch?v=zXB6hFrrBkA",
+    "requires": [
+      "KB-64"
+    ],
+    "external": [
+      "Heavy-club double rockit"
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-64",
+    "name": "Double Outside Swing",
+    "url": "https://www.youtube.com/watch?v=yr_fRgGevsE",
+    "requires": [
+      "KB-60"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-65",
+    "name": "Double Clean & Press",
+    "url": "https://www.youtube.com/watch?v=RizGV8ef--s",
+    "requires": [
+      "KB-19",
+      "KB-62"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-66",
+    "name": "Full Snatch",
+    "url": "https://www.youtube.com/watch?v=f-zkPiAlpQw",
+    "requires": [
+      "KB-61",
+      "KB-81"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-67",
+    "name": "Double Front Squat",
+    "url": "https://www.youtube.com/watch?v=dX5yXJa5Dm0",
+    "requires": [
+      "KB-62"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-68",
+    "name": "Double Clean to Front Squat",
+    "url": "https://www.youtube.com/watch?v=R3s6Wb_ApHM",
+    "requires": [
+      "KB-67"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-69",
+    "name": "Snatch Press",
+    "url": "https://www.youtube.com/watch?v=IzFPa_Q1yHM",
+    "requires": [
+      "KB-66"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-70",
+    "name": "Half-Kneeling Snatch Up",
+    "url": "https://www.youtube.com/watch?v=1_UrK5SopL4",
+    "requires": [
+
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-71",
+    "name": "Dead Stop Double Clean",
+    "url": "https://www.youtube.com/watch?v=22bKQqMqAQY",
+    "requires": [
+      "KB-62"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-72",
+    "name": "Deck Squat",
+    "url": "https://www.youtube.com/watch?v=vUJ3sZVwZ4Y",
+    "requires": [
+      "KB-55",
+      "KB-39",
+      "KB-43"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-73",
+    "name": "Two Hand Single Bent Leg Deadlift",
+    "url": "https://www.youtube.com/watch?v=-RD1qqe7P8M",
+    "requires": [
+      "KB-56"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-74",
+    "name": "Double Hang Clean To Squat",
+    "url": "https://www.youtube.com/watch?v=SdPEkv56Lt8",
+    "requires": [
+      "KB-68"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-75",
+    "name": "Two Hand Single Straight Leg Deadlift",
+    "url": "https://www.youtube.com/watch?v=tMt2hzfFGzo",
+    "requires": [
+      "KB-73"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-76",
+    "name": "Double Dead Hang Clean & Press",
+    "url": "https://www.youtube.com/watch?v=ieDA4V9WGNQ",
+    "requires": [
+      "KB-65"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-77",
+    "name": "Single Hand Single Leg Deadlift",
+    "url": "https://www.youtube.com/watch?v=1K4hgXfUinU",
+    "requires": [
+      "KB-75"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-78",
+    "name": "Double Clean Squat Press",
+    "url": "https://www.youtube.com/watch?v=fWPDPBliCEk",
+    "requires": [
+      "KB-76",
+      "KB-68"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-79",
+    "name": "Half-Kneeling Snatch Down",
+    "url": "https://www.youtube.com/watch?v=okO-7womT5Q",
+    "requires": [
+      "KB-70"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-80",
+    "name": "Double Dead Hang Clean Squat Press",
+    "url": "https://www.youtube.com/watch?v=DpGOSw7kGO0",
+    "requires": [
+      "KB-74",
+      "KB-78"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-81",
+    "name": "Half Kneeling Full Snatch",
+    "url": "https://www.youtube.com/watch?v=axx4kfUzkl4",
+    "requires": [
+      "KB-79"
+    ],
+    "external": [
+
+    ],
+    "bells": 1
+  },
+  {
+    "id": "KB-82",
+    "name": "Double Clean Press Squat",
+    "url": "https://www.youtube.com/watch?v=t5fDkX3vjiU",
+    "requires": [
+      "KB-78"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-83",
+    "name": "Double Clean Rack Step Back Lunge",
+    "url": "https://www.youtube.com/watch?v=mNt7guHRP4U",
+    "requires": [
+      "KB-68"
+    ],
+    "external": [
+
+    ],
+    "bells": 2
+  },
+  {
+    "id": "KB-84",
+    "name": "Side to Side Swing",
+    "url": "https://www.youtube.com/watch?v=W_04Zv3p2HM",
+    "requires": [
+      "KB-75"
+    ],
+    "external": [
+      "Heavy-club side-to-side swing"
+    ],
+    "bells": 1
+  }
+]
